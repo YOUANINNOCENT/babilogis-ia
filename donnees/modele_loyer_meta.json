@@ -1,0 +1,92 @@
+{
+  "modele": "Random Forest",
+  "scikit_learn": "1.9.1",
+  "cible": "log(prix_fcfa) mensuel",
+  "variables": {
+    "categorielles": [
+      "commune",
+      "type_logement"
+    ],
+    "numeriques": [
+      "pieces",
+      "meuble",
+      "nb_equipements",
+      "eq_piscine",
+      "eq_jardin",
+      "eq_parking",
+      "eq_gardien",
+      "eq_climatisation",
+      "eq_groupe_electrogene",
+      "eq_forage",
+      "eq_ascenseur",
+      "eq_terrasse",
+      "eq_haut_standing"
+    ],
+    "quartier": [
+      "quartier_cle"
+    ],
+    "equipements": [
+      "piscine",
+      "jardin",
+      "parking",
+      "gardien",
+      "climatisation",
+      "groupe_electrogene",
+      "forage",
+      "ascenseur",
+      "terrasse",
+      "haut_standing"
+    ]
+  },
+  "colonnes_entree": [
+    "commune",
+    "type_logement",
+    "pieces",
+    "meuble",
+    "nb_equipements",
+    "eq_piscine",
+    "eq_jardin",
+    "eq_parking",
+    "eq_gardien",
+    "eq_climatisation",
+    "eq_groupe_electrogene",
+    "eq_forage",
+    "eq_ascenseur",
+    "eq_terrasse",
+    "eq_haut_standing",
+    "quartier_cle"
+  ],
+  "communes": [
+    "Abobo",
+    "Bingerville",
+    "Cocody",
+    "Koumassi",
+    "Marcory",
+    "Plateau",
+    "Port-Bouët",
+    "Songon",
+    "Yopougon"
+  ],
+  "types": [
+    "appartement",
+    "chambre",
+    "studio",
+    "villa"
+  ],
+  "verdict": {
+    "bonne_affaire_si_ratio_inf": 0.85,
+    "au_dessus_si_ratio_sup": 1.15
+  },
+  "fourchette_multiplicateurs": [
+    0.752,
+    1.33
+  ],
+  "validation_croisee": {
+    "MAE (FCFA)": 250953.2,
+    "MAPE (%)": 35.42,
+    "Erreur médiane (%)": 21.35,
+    "Dans ±20 % (%)": 47.77,
+    "R² (log)": 0.86
+  },
+  "nb_annonces": 875
+}
