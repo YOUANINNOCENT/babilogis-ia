@@ -8,4 +8,4 @@ COPY app ./app
 COPY donnees ./donnees
 ENV BABILOGIS_PRODUCTION=1
 # « :: » : écoute en IPv4 et IPv6 (réseau privé Railway : ia.railway.internal)
-CMD ["sh", "-c", "uvicorn app.main:app --host :: --port ${PORT:-8001}"]
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 :: --port ${PORT:-8001}"]
